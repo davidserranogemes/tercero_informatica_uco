@@ -3,6 +3,8 @@ Practicas de tercero de informatica
 
 Se adjunta un listado de las asignaturas junto a la nota:
 
+Primer cuatrimestre:
+
   -Algoritmica (8.4)
   
   -FSIV (8.0)
@@ -11,7 +13,9 @@ Se adjunta un listado de las asignaturas junto a la nota:
   
   -Redes (9.6)
   
-  -IAA (MH): No contiene código, sino la estructura de archivos que use para el trabajo.
+Segundo cuatrimestre:
+
+  -IAA (MH): No contiene código, sino la estructura de archivos que usé para el trabajo.
   
   -Procesadores de lenguajes (8.5)
  
