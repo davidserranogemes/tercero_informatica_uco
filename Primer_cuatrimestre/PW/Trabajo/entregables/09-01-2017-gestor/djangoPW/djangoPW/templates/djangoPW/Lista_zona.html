@@ -1,0 +1,24 @@
+{% extends "baseDocumentTemplate.html" %}
+
+{% block content %}
+
+<p>Cursos:</p>
+{% if lista_curso|length %}
+	{% for curso in lista_curso %}
+		<ul><a href="{% url 'cursos:detalle_curso' curso.nombre %}">{{curso.nombre}}</a></ul>
+	{% endfor %}
+{% else %}
+	<p>No hay cursos en {{zona}}</p>
+{% endif %}
+
+<p>Practicas:</p>
+{% if lista_practica|length %}
+	{% for practica in lista_practica %}
+		<ul><a href="{% url 'practicas:detalle_practica' practica.pk %}">{{practica.nombre}}</a></ul>
+	{% endfor %}
+{% else %}
+	<p>No hay practicas en {{zona}}</p>
+{% endif %}
+
+
+{% endblock %}

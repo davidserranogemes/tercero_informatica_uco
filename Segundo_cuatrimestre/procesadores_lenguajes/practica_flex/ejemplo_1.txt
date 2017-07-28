@@ -1,0 +1,28 @@
+#Este fichero no contiene errores de pseudocodigo
+
+#Ejemplos de numeros validos
+12e10
+12e1.2
+
+
+(*
+	Descripcion:
+		Este codigo realiza el factorial de un numero
+
+*)
+
+
+
+
+escribir( 'Introduce un numero positivo: ' );
+	leer( numero );
+	si ( numero < 0 ) entonces
+		escribir( 'No existen factoriales negativos')
+	si_no
+		i := 1;
+		factorial:=1;
+		para ( i <= numero)
+			factorial := i * factorial;
+			i := i+1;
+		fin_para
+		escribir( 'El factorial de ' numero ' es ' factorial );

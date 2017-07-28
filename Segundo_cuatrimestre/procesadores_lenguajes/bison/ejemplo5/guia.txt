@@ -1,0 +1,7 @@
+Si se nos da un aviso de desplazamiento
+Usamos bison -v fichero.y
+Al principio del fichero.output creado se nos indican los conflictos.
+buscamos el state que se indica que tiene el fallo y observamos cual es la confusion
+rn ls linea 52 lo arreglamos añadimmos PRINT delante de expr
+en la linea 38 añadimos PRINT como token
+en el lexico añadimos la linea "print" {return PRINT;} (antes de la regla del identificador)

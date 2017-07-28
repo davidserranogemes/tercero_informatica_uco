@@ -1,0 +1,13 @@
+{% extends "baseDocumentTemplate.html" %}
+
+{% block content %}
+<p>Empresas que contienen "{{empresa}}":<br></p>
+{% if lista_empresas|length %}
+	{% for emp in lista_empresas %}
+		<ul><a href="{% url 'empresa:detalle_empresa' emp.pk %}">{{emp.nombre}}</a></ul>
+	{% endfor %}
+{% else %}
+	<p>No hay empresas con ese nombre</p>
+{% endif %}
+
+{% endblock %}

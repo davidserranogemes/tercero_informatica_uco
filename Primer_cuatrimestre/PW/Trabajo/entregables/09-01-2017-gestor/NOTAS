@@ -1,0 +1,36 @@
+Para acceder al usuario de administracion usar la ruta /admin
+Usuario: admin
+Password: passwordPW
+
+Usuario gestor: incluido por la interfaz de administracion y perteneciente al grupo gestores. El grupo puede modificar y eliminar practicas/cursos, permitiendo un control de las mismas en caso de que haya algun problema. No tienen ninguna otra funcion. (Son staff)
+Username: gestorPW
+password: passwordPW
+
+
+Los usuarios normales(universitarios) no se registran.
+Las empresas se registra y se logean para administrar sus datos, pueden:
+	Añadir/modificar/borrar cursos y practicas
+	Para acceder a su panel de control deben clickar en el enlace Mi empresa, siempre disponible.
+	Para modificar un curso/practica clickar en mi empresa-> Mis cursos/Mis practicas -> clickar en cualquiera para modificarlo
+	En la interfaz de la modificacion hay un enlace al borrado, pide confirmacion
+
+Los usuarios puedes buscar segun tema, zona  o directamente buscar una empresa.
+Ademas hay una opcion para listar todos los cursos o practicas
+
+
+-----------------------------------------
+Las empresas introducen un username, que es privado y es con el que se registran y un nombre publico que es el que se muestra a los usuarios
+
+Empresas registradas:
+
+username	|	password
+-------------------------
+Steam		|	asdfghjkl
+UCO			|	asdfghjkl
+RIOT		|	asdfghjkl
+
+
+
+El administrador puede, desde la interfaz de administrador, actuar con total libertad sobre las empresas y sus cursos/practicas
+
+Usuario gestor: incluido por la interfaz de administracion y perteneciente al grupo gestores. El grupo puede modificar y eliminar practicas/cursos, permitiendo un control de las mismas en caso de que haya algun problema. No tienen ninguna otra funcion. (Son staff)

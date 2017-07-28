@@ -1,0 +1,19 @@
+repetir
+
+
+
+hasta (que la condicion sea verdad, al reves que el while)
+
+
+
+
+para i desde 1 hasta 10 paso 1
+
+
+
+
+fin_para
+
+
+
+COger el ejemplo 9 de base, cambiando la parte léxica primero

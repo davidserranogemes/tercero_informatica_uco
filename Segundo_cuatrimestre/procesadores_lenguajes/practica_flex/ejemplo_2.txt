@@ -1,0 +1,35 @@
+//Este fichero contiene errores de pseudocodigo
+
+#ejemplo de malos numeros
+123.123.123
+123..123
+123....12313
+12e12e10
+123ee1.2
+
+#malos identificadores
+_num
+2var
+var_
+var__var
+var__with__2__
+
+
+/*
+	Descripcion:
+		Este codigo realiza el factorial de un numero, pero tiene mala sintaxis
+
+*/
+
+escribir( "Introduce un numero positivo: " );
+	leer( _numero );
+	si ( _numero < 0 ) entonces:
+		escribir( "No existen factoriales negativos")
+	si_no:
+		_i = 1;
+		factorial_=1;
+		para ( i <= numero):
+			factorial = i * factorial;
+			i = i+1;
+		fin_para
+		escribir( "El factorial de " numero " es " factorial );

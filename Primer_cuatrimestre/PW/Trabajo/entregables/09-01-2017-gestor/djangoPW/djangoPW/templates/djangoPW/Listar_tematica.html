@@ -1,0 +1,26 @@
+{% extends "baseDocumentTemplate.html" %}
+
+{% block content %}
+
+<p>Tema: {{tema}}</p>
+
+<p><br>Cursos:</p>
+{% if lista_cursos %}
+	{% for curso in lista_cursos %}
+		<ul><a href="{% url 'cursos:detalle_curso' curso.nombre %}">{{curso.nombre}}({{curso.empresa.nombre}})</a></ul>
+	{% endfor %}
+{% else %}	
+	<p>No hay cursos de esta tematica</p>
+{% endif %}
+
+<p><br>Practicas:</p>
+{% if lista_practicas %}
+	{% for practica in lista_practicas %}
+		<ul><a href="{% url 'practicas:detalle_practica' practica.pk %}">{{practica.nombre}}({{practica.empresa.nombre}})</a></ul>
+	{% endfor %}
+{% else %}	
+	<p>No hay cursos de esta tematica</p>
+{% endif %}
+
+
+{% endblock %}

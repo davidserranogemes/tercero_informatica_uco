@@ -1,0 +1,36 @@
+Caso general:
+[Ciudadano]-(Login)
+(Login)-(Seleccionar Mocion)
+(Seleccionar Mocion)-(Votar)
+(Seleccionar Mocion)-(Comentar)
+(Login)-(Notificaciones)
+(Login)-(Crear Mocion)
+(Login)-(Partidos politicos)
+(Partidos politicos)-(Asociar)
+(Partidos politicos)-(Cambiar Permisos)
+
+Votar:
+[Ciudadano]-(Login)
+(Login)-(Seleccionar Mocion)
+(Seleccionar Mocion)-(Votar o Cambiar Voto)
+(Votar o Cambiar Voto)-(Si)
+(Votar o Cambiar Voto)-(No)
+(Si)-(Confirmar)
+(No)-(Confirmar)
+
+Comentar:
+[Ciudadano]-(Seleccionar Mocion)
+(Seleccionar Mocion)-(Comentar)
+(Seleccionar Mocion)-(Editar comentario)
+(Seleccionar Mocion)-(Borrar comentario)
+(Comentar)-(Publicar)
+(Editar comentario)-(Publicar)
+(Borrar comentario)-(Confirmar)
+
+Crear mocion:
+[Ciudadano]-(Escribir título)
+(Escribir título)-(Redactar contenido de la moción)
+(Redactar contenido de la moción)-(Seleccionar ámbitos)
+(Seleccionar ámbitos)-(Revisar)
+(Revisar)-(Mandar a moderación)
+(Revisar)-(Descartar)

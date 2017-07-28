@@ -1,0 +1,9 @@
+{% extends "baseTemplatePractica.html" %}
+{% block title %}Borrando practica {{practica.nombre}}{% endblock %}
+{% block mainText %}
+
+<form id='form' method='POST'>{% csrf_token %}
+	<p>¿Esta seguro de que desea borrar {{practica.nombre}}?</p>
+	<input type="submit" name="Borrar">
+</form>
+{% endblock %}

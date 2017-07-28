@@ -1,0 +1,22 @@
+{% extends "baseTemplatePractica.html" %}
+{% block tittle %}{{object.nombre}{% endblock %}
+
+{% block mainText %}
+<p>Nombre: {{object.nombre}}</p>
+<p>Empresa: {{object.empresa.nombre}}</p>
+<p>Descripcion: {{object.descripcion}}</p>
+
+<p>Duracion: {{object.duracion}}  meses</p>
+<p>Horas semanales: {{object.horas_semana}}</p>
+<p>Dias de trabajo a la semana: {{object.dias_trabajo}}</p>
+<p>Zona de trabajo: {{object.zona}}</p>
+<p>Sueldo: {{object.remuneracion}} euros</p>
+<p>Titulos buscados: {{object.target}}</p>
+
+
+<p>Contactos de la empresa:
+<ul>-Telefono: {{object.empresa.telefono}}</ul>
+<ul>-Email: {{object.empresa.email}}
+</ul>
+</p>
+{% endblock %}

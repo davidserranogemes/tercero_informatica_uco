@@ -1,0 +1,28 @@
+El unico problema es que no permte poner ; detras del if
+
+El conflicto que aparece en el nueve no va a aparecer porque va a haber un delimitador final, es el fallo del else danzante
+
+EL conflicto de los ejemplos anteriores es por una asignación y se elimina con un print
+
+pag 3 del pdf,while:
+lo que hay tras los 2 primeros STOP y antes del siguiente es la condicion de parada, si no se cumple se psa detras del ultimo STOP, si se cumple ejecuta a partir de la primera flecha (varpush) hasta el ultimo STOP, donde vuelve hacia atras para evaluar la condicion de parada
+
+pag 5 pdf, if:
+requiere 3 STOPS, para la condficion, la alternativa y no hacer nada
+
+
+
+
+El do while sería 
+
+dowhilecode
+sTOP -> a condicion
+STOP -> a ultimo STOP
+cuerpo STOP
+Condicion
+STOP
+
+
+
+
+

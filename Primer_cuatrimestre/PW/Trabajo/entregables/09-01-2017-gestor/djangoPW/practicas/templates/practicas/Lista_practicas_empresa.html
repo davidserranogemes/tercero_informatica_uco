@@ -1,0 +1,21 @@
+{% extends "baseTemplatePractica.html" %}
+{% block title %}Lista practicas{% endblock %}
+
+{% block mainText %}
+<h1>Practicas que se ofertan actualmente. Pinche para modificarlas</h1>
+
+{% if practicas_list %}
+	Sus practicas activas son:
+{% else %}
+	No tiene practicas activas.
+{% endif %}
+<a href="{% url 'practicas:nueva_practica' %}"><br>Añadir practica</a>
+<ul>
+{% for practica in practicas_list %}
+	<li><a href="{% url 'practicas:modificar_practica' practica.pk %}">{{practica.nombre}}</a>: {{practica.descripcion}}</li>
+{% endfor %}
+</ul>	
+
+
+
+{% endblock %}

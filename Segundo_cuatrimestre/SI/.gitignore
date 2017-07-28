@@ -1,0 +1,10 @@
+# Ignore all object files
+*.o
+# Ignore all dependency files
+*.d
+/Practica1/JavaBasico/nbproject/private/
+/Practica4/internacionalizacion_p4/nbproject/private/
+/Practica3/codificado/nbproject/private/
+/Practica3/componente/nbproject/private/
+/Practica3/manejo_componente/nbproject/private/
+/Practica3/simon_dice/nbproject/private/

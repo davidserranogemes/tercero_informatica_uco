@@ -1,0 +1,236 @@
+/****************************************************************\
+|* Fichero de control de tareas para el trabajo de practicas de	*|
+|* procesadores de lenguajes									*|
+|*																*|
+|* Autor: David Serrano Gemes									*|
+|* 																*|
+|* Para uso libre												*|
+|* No me hago responsable de errores al marcar y dejar algo sin *|
+|* revisar														*|
+|* 																*|
+|* Comprobar que no se he olvidado alguna tarea					*|
+\****************************************************************/
+
+-----------------------------------------------------------------
+NO EXISTEN CONFLICTOS EN LAS REGLAS DE PRODUCCION:		[+]
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+PALABRAS RESERVADAS:		[ ]							CHECK
+-----------------------------------------------------------------
+	_mod												[+]
+	_div												[+]
+
+	_o 													[+]
+	_y													[+]
+	_no													[+]
+
+	leer												[+]
+	leer_cadena											[+]
+
+	escribir											[+]
+	escribir_cadena										[+]
+
+	SENTENCIA IF:										[+]
+		si												[+]
+		entonces										[+]
+		si_no											[+]
+		fin_si											[+]
+
+	SENTENCIA WHILE:									[+]
+		mientras										[+]
+		hacer											[+]
+		fin_mientras									[+]
+
+	SENTENCIA DO WHILE:									[+]
+		repetir											[+]
+		hasta											[+]
+
+	SENTENCIA PARA:										[+]
+		para											[+]
+		desde											[+]
+		hasta											[+]
+		paso											[+]
+		fin_para										[+]
+para i(VAR) obligatoriamente) desde 1 hasta 10 paso 1
+
+	MACROS:												[+]
+		_borrar											[+]
+		_lugar											[+]
+
+	NO SE DISTINGUE MAYUSCULAS/MINUSCULAS				[+]
+	PALABRAS RESERVADAS NO IDENTIFICADORES				[+]
+
+
+-----------------------------------------------------------------
+IDENTIFICADORES:		[*]								CHECK
+-----------------------------------------------------------------
+	LETRAS-DIGITOS-SUBRAYADO							[+]
+	INICIO=LETRA										[+]
+	FIN!=_ Y NUNCA __									[+]
+
+	NO SE DISTINGUE MAYUSCULAS/MINUSCULAS				[+]
+
+
+-----------------------------------------------------------------
+NUMERO:					[+]								CHECK
+-----------------------------------------------------------------
+	ENTEROS 											[+]
+	REALES DE PUNTO FIJO								[+]
+	REALES NOTACION CIENTIFICA							[+]
+
+	TODOS SON TRATADOS COMO NUMERO						[+]
+
+-----------------------------------------------------------------
+CADENA:					[+]								CHECK
+-----------------------------------------------------------------
+	CARACTERES DELIMITADOS COMILLAS SIMPLES 			[+]
+	INCLUYE COMILLA SIMPLE CON \ \'						[+]
+
+	COMILLAS EXTERIORES NO SON PARTE DE LA CADENA 		[+]
+
+-----------------------------------------------------------------
+OPERADORES:				[ ]								CHECK
+-----------------------------------------------------------------
+	NUMERICOS											[*]
+		ASIGNACION :=									[*]
+		SUMA +											[*]
+			UNARIO +2									[*]
+			BINARIO 2+3									[*]
+		RESTA -											[*]
+			UNARIO -2									[*]
+			BINARIO 2-3									[*]
+		PRODUCTO *										[*]
+		DIVISION /										[*]
+		DIVISION_ENTERA _div							[*]
+		MODULO _mod										[*]
+		POTENCIA **										[*]
+
+	ALFANUMERICOS										[+]
+		CONCATENACION ||								[+]
+
+	RELACIONALES NUMEROS Y CADENAS						[+]
+		MENOR QUE <										[+]
+		MENOR O IGUAL QUE <=							[+]
+		MAYOR QUE >										[+]
+		MAYOR O IGUAL QUE >=							[+]
+		IGUAL QUE 	=									[+]
+		DISTINTO DE <>									[+]
+
+	LOGICOS												[+]
+		DISYUNCION _o									[+]
+		CONJUNCION _y									[+]
+		NEGACION _no									[+]
+
+-----------------------------------------------------------------
+OTROS:					[ ]								CHECK
+-----------------------------------------------------------------
+	COMENTARIOS											[+]
+		VARIAS LINEAS, DELIMITADOR #					[+]
+		UNA LINEA, DELIMITADOR @						[+]
+
+	FIN DE LINEA ;										[+]
+
+-----------------------------------------------------------------
+SENTENCIAS DE CONTROL:	[ ]								CHECK
+-----------------------------------------------------------------
+	ASIGNACION											[+]
+		IDENTIFICADOR := EXPR NUMERICA					[+]
+		IDENTIFICADOR := EXPR ALFANUMERICA				[+]
+
+	LECTURA												[+]
+		Leer(identificador)								[+]
+		Leer_cadena(identificador)						[+]
+
+	ESCRITURA											[+]
+		Escribir										[+]
+		Escribir_cadena									[+]
+
+	SENTENCIAS DE CONTROL								[+]
+		CONDICIONAL SIMPLE								[+]
+			si cond
+				entonces sentencias
+			fin_si
+
+		CONDICIONAL COMPUESTA							[+]
+			si cond
+				entonces sentencias
+				si_no sentencias
+			fin_si
+
+		BUCLE "mientras"								[+]
+			mientras cond hacer
+						sentencias
+			fin_mientras
+
+		BUCLE "repetir"									[+]
+			repetir
+				sentencias
+			hasta cond
+
+		BUCLE "para"									[+º
+			para identificador
+				desde expr numerica 1
+				hasta expr numerica 2
+				paso expre numerica 3
+				hacer
+					sentencias
+			fin_para
+
+-----------------------------------------------------------------
+COMANDOS ESPECIALES:	[ ]								CHECK
+-----------------------------------------------------------------
+	_borrar												[+]
+	_lugar(expr numerica 1, expr numerica 2)			[+]
+
+-----------------------------------------------------------------
+OBSERVACIONES:			[+]								CHECK
+-----------------------------------------------------------------
+	CAMBIO DE TIPO DINAMICO								[+]
+
+
+-----------------------------------------------------------------
+CONTROL DE ERRORES:		[ ]								CHECK
+-----------------------------------------------------------------
+	LEXICOS
+		IDENTIFICADOR MAL ESCRITO 						[+]
+		SIMBOLO NO PERMITIDO							[+]
+		OTROS											[+]
+
+	SINTACTICOS											[ ]
+		SENTENCIA CONTROL MAL ESCRITA					[+]
+		SENTENCIA ARGUMENTOS INCOMPATIBLES				[+]
+		OTROS											[ ]
+
+	SEMANTICOS											[+]
+		ARGUMENTOS U OPERANDOS INCOMPATIBLES			[+]
+
+	DE EJECUCION										[ ]
+		SENTENCIA PARA BUCLE INFINITO					[+]
+		FICHERO INEXISTENTE								[+]
+		FICHERO MALA EXTENSION							[+]
+		OTROS											[ ]
+
+-----------------------------------------------------------------
+MODOS DE EJECUCION:		[*]								CHECK
+-----------------------------------------------------------------
+	INTERACTIVO											[+]
+	DESDE FICHERO										[+]
+
+-----------------------------------------------------------------
+OPCIONALES:				[ ]								CHECK
+-----------------------------------------------------------------
+	OPERADORES UNARIOS (++, --, etc)					[ ]
+	OPERADIRES ARITMETICOS Y ASIGNACION (+:=,-:=)		[ ]
+
+	SENTENCIA "segun"									[ ]
+		segun(expresion)
+			valor v1:
+
+			valor v2:
+
+			defecto:
+
+		fin_segun
+
+	OTROS:												[ ]

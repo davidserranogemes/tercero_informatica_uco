@@ -1,0 +1,13 @@
+{% extends "baseTemplatePractica.html" %}
+
+{% block title %}Nuevo practica{% endblock %}
+
+{% block mainText %}La duracion es en meses y la remuneracion en euros/mes
+	<form id='form' method='POST' enctype="multipart/form-data" action="">{% csrf_token %}
+		{{ form.as_p }}
+		<p><input type="submit" name="Submit"></p>
+	</form>
+
+
+	</p>
+{% endblock %}

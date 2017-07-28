@@ -1,0 +1,14 @@
+{% extends "baseTemplateEmpresa.html" %}
+
+{% block tittle %}Login{% endblock %}
+
+{% block mainText %}
+	<p>
+	<form id='form' method='POST' enctype="multipart/form-data" action="">{% csrf_token %}
+		{{ form.as_p }}
+		<p><input type="submit" name="Submit"></p>
+	</form>
+
+
+	</p>
+{% endblock %}

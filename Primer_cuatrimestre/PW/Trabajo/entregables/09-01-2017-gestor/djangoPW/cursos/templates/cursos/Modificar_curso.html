@@ -1,0 +1,17 @@
+{% extends "baseTemplateCursos.html" %}
+
+{% block title %}Modificando el curso {{curso.nombre}}{% endblock %}
+
+{% block mainText %}IMPORTANTE: las fechas deben introducirse en formato YYYY-MM-DD ---> Ejemplo: 2016-01-01
+
+	<form id='form' method='POST' enctype="multipart/form-data" action="">{% csrf_token %}
+	{{ form.as_p }}	
+	<p><input type="submit" name="Submit"></p>
+	
+	</form>
+
+
+	</p>
+
+<a href="{% url 'cursos:eliminar_curso' curso.pk %}">Borrar curso</a>
+{% endblock %}

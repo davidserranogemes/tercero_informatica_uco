@@ -1,0 +1,57 @@
+/** Diseño centrado en el usuario **/
+
+1_ Introducccion al problema
+2_ Definicion del problema
+3_ Objetivos "General y específico"
+4_ Antecedentes "Que había antes, inspiraciones"
+
+5_ Iteracion 1:
+	5_ Metodología del proyecto: centrada en el usuario -> Iteraciones; análisis de requisitos -> casos de uso más importantes (herramienta para hacer casos de uso en moodle)
+	6_ Diseño y especificación de la interfáz -> Pencil
+	7_ Prototipado o implementación
+	8_ Evaluación
+
+.
+.
+.
+6_ Iteración 2:
+
+De lo que se haya cambiado se habla y si no se indica que no ha habido cambios
+
+	5_ Metodología del proyecto: centrada en el usuario -> Iteraciones; análisis de requisitos -> casos de uso más importantes (herramienta para hacer casos de uso en moodle)
+	6_ Diseño y especificación de la interfáz -> Pencil
+	7_ Prototipado o implementación
+	8_ Evaluación
+
+
+
+
+Las iteraciones pueden hacerse con menos pasos, por ejemplo sobre el diseño de pencil
+
+
+2-4 Iteraciones
+
+
+
+
+
+
+
+TIPOS DE TRABAJOS:
+-Ser original
+	-Interfaz de control de trafico de drones
+	-Control aereo de coches voladores
+
+-Defectos Usabilidad: encontrar un programa, hardware,  -> Proponer mejoras con misma utilidad
+-Usabilidad web baja:
+-Aplicaciones móviles
+
+nombre-apellidos.zip con todo
+
+Pencil, memoria, codigo fuente
+
+Miercoles 17 entrega final del trabajo
+
+
+Hasta donde llegar con el trabajo:
+Cosas simples, simular que las cosas pasan usando dummies o ejemplos prehechos

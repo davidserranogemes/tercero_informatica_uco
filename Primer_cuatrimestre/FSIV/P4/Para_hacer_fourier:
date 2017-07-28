@@ -1,0 +1,16 @@
+Para hacer fourier:
+lo primero es obtener el tam optimo
+es un numero un poco mas grande siempre por lo que el vector se queda corto
+tienes que ampliarlo y los puntos nuevos los rellenas con los valores del principio
+tienes que ampliarlo y los puntos nuevos los rellenas con los valores del principio
+las posicion11 la rellenas con el elemento 1, la 12 con el 2 y la 13 con el 3 ( En el programa el primer elemento seria el 0 no el 1)
+una vez haces eso haces dft
+ambos vectores de tipo float2f (n o afecta al resto de calculos)
+una vez hecho eso hacer el modulo a cada punto sqrt(pow(x,2)pow(y,2))
+y lo guardamos en un vector de flotantes
+buscamos el maximo del vector y dividimos cada elemento del vector entre el maximo
+
+IMPORTANTE
+ahora bien, es imposible que salgan los mismo resultados si no tienes los mismo puntos que el
+es decir, teneis que hacer la correción al guardar la coordenada y la imagen
+correccion al guardar la coord y: img.altura-punto.y (normalmente 256-punto.y)

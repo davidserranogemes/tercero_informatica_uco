@@ -1,0 +1,12 @@
+compruebo si la zona es homogenea, si no lo es, la divido en 4 y vuelvo a comprobar si la region es homogenea max/min> umbral
+si la region es demasiado pequeña 16 px, no  se divide mas
+
+histograma:
+hacemos el LBP normal, y  para el uniforme comprobamos si se corresponde a algun patron, el cual tiene un valor previo asignado (el no corresponder es otro patron) Luego lo normalizamos, dividimos cada elemento del histograma entre el nEle(asi no depende del size)
+
+para saber si una region es homogenes la dividimos en 4 y hacemos la distancia entre todos los pares (chi cuadrado, 6 veces) Cogemos el maximo y el minimo y si max/min>umbral dividimos y reapilamos, si no,  los mandamos a la lista de regiones. Controlar que la region no sea demasiado pequeña
+
+A la hora de unir hacer matriz adyacencias. en ella marcamos las regiones que se tocan. Buscamos el par significativo, y los unimos. Reseteamos la informacion de adyacencia de  una de ellas y pasamos esa informacion a la que se fusiono. Recalculamos las distancias.
+
+fusion:
+con una lista de regiones buscamos la regiones vecinas o adyacentes, distancia entre histogramas * n pixeles(zona mas pequeña)

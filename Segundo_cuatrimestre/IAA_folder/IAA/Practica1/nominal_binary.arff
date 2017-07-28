@@ -1,0 +1,12 @@
+@relation iris-weka.filters.unsupervised.attribute.NominalToBinary-Rfirst-last
+
+@attribute sepallength=largo numeric
+@attribute sepallength=corto numeric
+@attribute sepallength=medio numeric
+@attribute class {Iris-setosa,Iris-versicolor,Iris-virginica}
+
+@data
+1,0,0,Iris-setosa
+0,1,0,Iris-versicolor
+0,1,0,Iris-virginica
+0,0,1,Iris-setosa

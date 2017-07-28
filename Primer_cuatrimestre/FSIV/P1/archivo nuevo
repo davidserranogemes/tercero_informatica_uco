@@ -1,0 +1,73 @@
+instalar gtk
+instalar QT4
+
+
+cambiar la variable de entorno: PKG_CONFIG_PATH=/usr/local/opencv-3.1.0 a donde este instalado el opencv
+meter esa variable en el bash.rc
+
+se deben incluir casi siempre <opencv2/core/core.hpp>
+								//#include <opencv2/highgui/highgui.hpp> 
+								//#include <opencv2/imgproc/imgproc.hpp>
+
+
+  Para compilar, puedes ejecutar:
+    g++ -Wall -o esqueleto esqueleto.cc `pkg-config opencv --cflags --libs`
+
+
+    opencv doc para buscar la documentacion
+
+
+
+   namespace cv::
+
+   mstriz cv::Mat img;
+   img.empty() nos devuelve true si esta vacia, util para comprobar errores
+
+   img.rows filas
+   img.cols columnas
+
+para leer fotos
+img=cv::imread("fichero",constantes)
+
+para manipular las celdas: 
+img.at<tipo>(y,x)
+[] permite acceder al elemento seleccionado
+
+hay que especificar el tipo correcto.
+uchar=para imagenes de disco normales, int
+cv::Vec3b tipo cuand son tres canales
+
+img.tipe() devuelve el tipo de los datos.
+	los tipos se usan con unas constantes especiales:
+	cv_8u/cv_8uCV1 8bit unsigned integers
+
+ademas añade una macro que explica el numero de canales 
+B/N= cv8uC1
+en color: cv_8uC3
+
+
+
+
+en las imagenes a color, es preferible desentrelazarlas antes de procesarlas, simplificando y unificando el codigo
+channels() devuelve el numero de canales que tiene
+
+
+el operador () permite seleccionar un trozo de la imagen para trabajar solo con esa
+
+
+para desentrelazar la imagen
+
+std::vector<cu::Mat> canales;
+cv::split(img,canales);
+caneles.size(); devuelve el numero de canales que has sacado de la imagen, ahora cada uno de los elementos del vector son las partes de la imagen que teniamos
+
+merge() entrelaza canales
+
+img tiene un bloque de memoria asignado. 
+img2=img1, si hacemos eso solo hemos hecho un alias. debemos copiar la imagen:
+
+mat::copyTo()
+img.copyTo(img2)
+
+para convertir tipos de imagen
+img.convertTo(donde se copia,tipo)

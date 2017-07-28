@@ -1,0 +1,12 @@
+{% extends "baseTemplateEmpresa.html" %}
+
+{% block mainText %}
+<p>{{msg}}</p>
+<form id="form" method="POST"  enctype="multipart/form-data">{% csrf_token %}
+{{form.as_p}}
+<input type="submit" name="Submit">
+	
+</form>
+
+
+{% endblock %}

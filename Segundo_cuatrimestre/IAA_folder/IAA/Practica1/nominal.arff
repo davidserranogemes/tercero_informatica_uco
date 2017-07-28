@@ -1,0 +1,10 @@
+@relation iris
+
+@attribute sepallength {largo,corto,medio}
+@attribute class {Iris-setosa,Iris-versicolor,Iris-virginica}
+
+@data
+largo,Iris-setosa
+corto,Iris-versicolor
+corto,Iris-virginica
+medio,Iris-setosa

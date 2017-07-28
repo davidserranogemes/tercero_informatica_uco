@@ -1,0 +1,305 @@
+//Sigue el patron de los apuntes del profesor
+//Recibe el valor del LBP normalizado
+
+int tablaCodigoUniforme(int valorLBP){
+	valorLBPUniformed=-1;
+	switch(valorLBP){//Los case son el resultado de evaluar el valor del vector de los patrones aceptados
+			case 0:
+
+				valorLBPUniformed=0;
+				break;
+			case 16:
+
+				valorLBPUniformed=1;
+				break;
+			
+			case 8:
+
+				valorLBPUniformed=2;
+				break;
+			
+			case 4:
+
+				valorLBPUniformed=3;
+				break;
+			
+			case 2:
+
+				valorLBPUniformed=4;
+				break;
+			
+			case 1:
+
+				valorLBPUniformed=5;
+				break;
+			
+			case 128:
+
+				valorLBPUniformed=6;
+				break;
+			
+			case 64:
+
+				valorLBPUniformed=7;
+				break;
+			
+			case 32:
+
+				valorLBPUniformed=8;
+				break;
+			
+			case 24:
+
+				valorLBPUniformed=9;
+				break;
+			
+			case 12:
+
+				valorLBPUniformed=10;
+				break;
+			
+			case 6:
+
+				valorLBPUniformed=11;
+				break;
+			
+			case 3:
+
+				valorLBPUniformed=12;
+				break;
+			
+			case 129:
+
+				valorLBPUniformed=13;
+				break;
+			
+			case 192:
+
+				valorLBPUniformed=14;
+				break;
+			
+			case 96:
+
+				valorLBPUniformed=15;
+				break;
+			
+			case 48:
+
+				valorLBPUniformed=16;
+				break;
+			
+			case 56:
+
+				valorLBPUniformed=17;
+				break;
+			
+			case 28:
+
+				valorLBPUniformed=18;
+				break;
+			
+			case 14:
+
+				valorLBPUniformed=19;
+				break;
+			
+			case 7:
+
+				valorLBPUniformed=20;
+				break;
+			
+			case 131:
+
+				valorLBPUniformed=21;
+				break;
+			
+			case 193:
+
+				valorLBPUniformed=22;
+				break;
+			
+			case 224:
+
+				valorLBPUniformed=23;
+				break;
+			
+			case 112:
+
+				valorLBPUniformed=24;
+				break;
+			
+			case 60:
+
+				valorLBPUniformed=25;
+				break;
+			
+			case 30:
+
+				valorLBPUniformed=26;
+				break;
+			
+			case 15:
+
+				valorLBPUniformed=27;
+				break;
+			
+			case 135:
+
+				valorLBPUniformed=28;
+				break;
+			
+			case 195:
+
+				valorLBPUniformed=29;
+				break;
+			
+			case 225:
+
+				valorLBPUniformed=30;
+				break;
+			
+			case 240:
+
+				valorLBPUniformed=31;
+				break;
+			
+			case 120:
+
+				valorLBPUniformed=32;
+				break;
+			
+			case 124:
+
+				valorLBPUniformed=33;
+				break;
+			
+			case 62:
+
+				valorLBPUniformed=34;
+				break;
+			
+			case 31:
+
+				valorLBPUniformed=35;
+				break;
+			
+			case 143:
+
+				valorLBPUniformed=36;
+				break;
+			
+			case 199:
+
+				valorLBPUniformed=37;
+				break;
+			
+			case 227:
+
+				valorLBPUniformed=38;
+				break;
+			
+			case 241:
+
+				valorLBPUniformed=39;
+				break;
+			
+			case 248:
+
+				valorLBPUniformed=40;
+				break;
+			
+			case 126:
+
+				valorLBPUniformed=41;
+				break;
+			
+			case 63:
+
+				valorLBPUniformed=42;
+				break;
+			
+			case 159:
+
+				valorLBPUniformed=43;
+				break;
+			
+			case 207:
+
+				valorLBPUniformed=44;
+				break;
+			
+			case 231:
+
+				valorLBPUniformed=45;
+				break;
+			
+			case 243:
+
+				valorLBPUniformed=46;
+				break;
+			
+			case 249:
+
+				valorLBPUniformed=47;
+				break;
+			
+			case 252:
+
+				valorLBPUniformed=48;
+				break;
+			
+			case 254:
+
+				valorLBPUniformed=49;
+				break;
+			
+			case 127:
+
+				valorLBPUniformed=50;
+				break;
+			
+			case 191:
+
+				valorLBPUniformed=51;
+				break;
+			
+			case 223:
+
+				valorLBPUniformed=52;
+				break;
+			
+			case 239:
+
+				valorLBPUniformed=53;
+				break;
+			
+			case 247:
+
+				valorLBPUniformed=54;
+				break;
+			
+			case 251:
+
+				valorLBPUniformed=55;
+				break;
+			
+			case 253:
+
+				valorLBPUniformed=56;
+				break;
+			
+			case 255:
+
+				valorLBPUniformed=57;
+				break;
+			
+			default:
+
+				valorLBPUniformed=58;
+				break;
+			
+			
+
+		}
+		return valorLBPUniformed;
+}

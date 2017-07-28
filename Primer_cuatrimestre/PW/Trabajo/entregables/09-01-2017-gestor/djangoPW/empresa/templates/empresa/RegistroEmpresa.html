@@ -1,0 +1,12 @@
+{% extends "baseTemplateEmpresa.html" %}
+
+{% block title %}Registro de nueva empresa{% endblock %}
+
+{% block mainText %}
+	<p>
+	<form id='form' method='POST' enctype="multipart/form-data" action="">{% csrf_token %}
+			{{form.as_p}}
+			<p><input type="submit" value='Submit'></p>
+	</form>
+	</p>
+{% endblock %}

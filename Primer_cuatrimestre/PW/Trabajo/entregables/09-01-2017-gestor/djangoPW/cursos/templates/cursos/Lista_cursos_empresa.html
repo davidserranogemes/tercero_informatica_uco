@@ -1,0 +1,20 @@
+{% extends "baseTemplateCursos.html" %}
+{% block title %}Mis cursos{% endblock %}
+{% block mainText %}
+<h1>Cursos que oferta actualmente. Pinche para modificarlos</h1>
+
+<p>Los cursos se ordenan por fecha de inicio</p>
+<a href="{% url 'cursos:nuevo_curso' %}">Añadir curso</a>
+
+<p>{{msg}}</p>
+
+<ul>
+
+{% for curso in list_cursos %}
+	<li><a href="{% url 'cursos:modificar_curso' curso.nombre %}">{{curso.nombre}}</a>: {{curso.descripcion}}</li>
+{% endfor %}
+</ul>	
+
+
+
+{% endblock %}

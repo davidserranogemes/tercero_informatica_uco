@@ -1,0 +1,43 @@
+{% extends "baseTemplateEmpresa.html" %}
+
+{% block title %}{{empresa.nombre}}{% endblock %}
+
+{% block mainText %}
+<p>Nombre público: {{empresa.nombre}}</p>
+<p>Descripcion: {{empresa.descripcion}}</p>
+<p>Username: {{empresa.username}}</p>
+<p>Telefono: {{empresa.telefono}}</p>
+<p>Email: {{empresa.email}}</p>
+
+
+<p><br><a href="{% url 'empresa:modificar_mi_empresa' %}">Modificar datos</a></p>
+<p><a href="{% url 'empresa:modificar_mi_contrasenia' %}">Cambiar contrasenia</a><br></p>
+
+
+<p><br>Estos son los servicios que ofrece:<br></p>
+{% if mis_cursos %}
+	<p><a href="/cursos/mis_cursos">Mis cursos:</a></p>
+	{% for curso in mis_cursos %}
+		<ul>{{curso.nombre}}: {{curso.descripcion}}</ul>
+	{% endfor %}
+
+{% else %}
+	<br>No tienes cursos actualmente.
+{% endif %}
+
+
+{% if mis_practicas %}
+	<p><a href="/practicas/mis_practicas">Mis practicas:</a></p>
+	{% for practica in mis_practicas %}
+		<ul>{{practica.nombre}}: {{practica.descripcion}}</ul>
+	{% endfor %}
+{% else %}
+	<br>No tienes practicas actualmente
+
+{% endif %}
+
+<p><br>Añada nuevos servicios:<br></p>
+<ul><a href="{% url 'cursos:nuevo_curso' %}">Añadir curso</a></ul>
+<ul><a href="{% url 'practicas:nueva_practica' %}">Añadir practica</a></ul>	
+
+{% endblock %}

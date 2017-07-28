@@ -1,0 +1,35 @@
+{% extends "baseTemplateEmpresa.html" %}
+
+{% block title %}{{empresa.nombre}}{% endblock %}
+
+{% block mainText %}
+Informacion publica de la empresa:
+
+<p>Nombre: {{empresa.nombre}}</p>
+<p>Descripcion: {{empresa.descripcion}}</p>
+<p>Telefono de contacto: {{empresa.telefono}} </p>
+<p>Email: {{empresa.email}}</p>
+
+<p>Cursos:</p>
+{% if lista_cursos|length %}
+	{% for curso in lista_cursos %}
+		<ul><a href="{% url 'cursos:detalle_curso' curso.nombre %}">{{curso.nombre}}</a></ul>
+	{% endfor %}
+{% else %}
+	<p>No ofertamos cursos</p>
+{% endif %}
+
+<p>Practicas:</p>
+{% if lista_practicas|length %}
+	{% for practica in lista_practicas %}
+		<ul><a href="{% url 'practicas:detalle_practica' practica.pk %}">{{practica.nombre}}</a></ul>
+	{% endfor %}
+{% else %}
+	<p>No ofertamos practicas</p>
+{% endif %}
+
+
+
+
+
+{% endblock %}

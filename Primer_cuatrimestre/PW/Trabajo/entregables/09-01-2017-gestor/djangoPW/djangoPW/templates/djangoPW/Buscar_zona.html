@@ -1,0 +1,13 @@
+{% extends "baseDocumentTemplate.html" %}
+
+
+{% block content %}
+
+<form id='form' method='POST' enctype="multipart/form-data" action="">{% csrf_token %}
+	{{ form.as_p }}
+	<p><input type="submit" name="Buscar"></p>
+
+</form>
+
+
+{% endblock %}

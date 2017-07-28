@@ -1,0 +1,19 @@
+{% extends "baseTemplateCursos.html" %}
+{% block tittle %}{{curso.nombre}{% endblock %}
+
+{% block mainText %}
+<p>Empresa: {{curso.empresa.nombre}}</p>
+<p>Descripcion: {{curso.descripcion}}</p>
+
+<p>Desde el {{curso.inicio}} hasta el {{curso.final}}  </p>
+<p>Zona de trabajo: {{curso.zona}}</p>
+<p>Precio: {{curso.precio}} euros</p>
+<p>Publico recomendado: {{curso.target}}</p>
+
+
+<p>Contactos de la empresa:
+<ul>-Telefono: {{curso.empresa.telefono}}</ul>
+<ul>-Email: {{curso.empresa.email}}
+</ul>
+</p>
+{% endblock %}

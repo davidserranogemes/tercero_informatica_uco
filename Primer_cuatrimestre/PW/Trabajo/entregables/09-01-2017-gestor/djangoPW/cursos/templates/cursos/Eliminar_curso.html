@@ -1,0 +1,12 @@
+{% extends "baseTemplateCursos.html" %}
+
+
+
+{% block title %}Borrar curso {{curso.nombre}} {% endblock %}
+
+{% block mainText %}
+<form id='form' method='POST'>{% csrf_token %}
+<p>¿Seguro que desea borrar el curso?<input type="submit" name="Borrar"></p>
+</form>
+
+{% endblock %}

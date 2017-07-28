@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="UTF-8">
+
+<head>
+	<title>{% block title %}Cursos y practicas de empresa{% endblock %}</title>
+</head>
+<body>
+	<p>{% block mainText %}Esta pagina web tiene como objetivo facilitar la comunicación entre estudiantes universitarios y empresas que ofrezcan cursos de formación o practicas.{% endblock %}</p>
+	<p>{% block content %}{% endblock %}</p>
+
+	<p>
+	{% block empresasUser %}
+	<p><br><br>Autentificacion:<br>Solo necesario para empresas</p>
+		<ul>
+			<li><p><a href="/empresa/mi_empresa">Mi empresa</a></p></li>
+			<li><p><a href="/empresa/login">Login</a></p></li>
+			<li><p><a href="/empresa/registro">Registro</a></p></li>
+			<li><p><a href="/empresa/logout">Logout</a></p></li>
+
+		</ul>
+
+	{% endblock %}
+	</p>
+
+	<p><br><a href="/">Volver al sitio principal</a></p>
+
+
+	
+<footer>Diseñada y construida por David Serrano Gemes. Tecnología usada Django.</footer>
+
+</body>
+</html>
