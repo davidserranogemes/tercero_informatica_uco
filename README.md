@@ -5,7 +5,7 @@ Se adjunta un listado de las asignaturas junto a la nota:
 
 Primer cuatrimestre:
 
-   -Algoritmica (8.4)
+    -Algoritmica (8.4)
   
     -FSIV (8.0)
   
